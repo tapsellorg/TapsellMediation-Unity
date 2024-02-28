@@ -1,0 +1,8 @@
+<dependencies>
+    <androidPackages>
+        <androidPackage spec="ir.tapsell.mediation.adapter:ironsource-unity:1.0.1-beta04" />
+        <repositories>
+            <repository>https://android-sdk.is.com</repository>
+        </repositories>
+    </androidPackages>
+</dependencies>

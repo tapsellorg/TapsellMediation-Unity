@@ -1,0 +1,6 @@
+<linker>
+  <assembly fullname="GoogleMobileAds.Android" ignoreIfMissing="1">
+    <namespace fullname="GoogleMobileAds" preserve="all" />
+    <namespace fullname="GoogleMobileAds.Android" preserve="all" />
+  </assembly>
+</linker>
