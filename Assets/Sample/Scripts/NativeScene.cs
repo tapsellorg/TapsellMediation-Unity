@@ -1,11 +1,11 @@
-﻿using Tapsell.Mediation.Show.Native;
+﻿using Sample.Scripts;
+using Tapsell.Mediation.Show.Native;
 using UnityEngine;
 
 public class NativeScene : MonoBehaviour
 {
-    private const string ZoneID = "a1822306-55be-4a30-aadd-368dba61a64e";
+    private const string ZoneID = TapsellMediationKeys.NATIVE;
     private static string _adId;
-    
     private static int _viewType = 0;
 
     public void Request()

@@ -1,10 +1,11 @@
-﻿using Tapsell.Mediation.Request;
+﻿using Sample.Scripts;
+using Tapsell.Mediation.Request;
 using Tapsell.Mediation.Show.Banner;
 using UnityEngine;
 
 public class BannerScene : MonoBehaviour
 {
-    private const string ZoneID = "bbf65b62-293b-4a34-a39d-8b3acab15771";
+    private const string ZoneID = TapsellMediationKeys.BANNER;
     private static string _adId;
     private static BannerPosition _position = BannerPosition.Top;
     private static BannerSize _size = BannerSize.Banner32050;
