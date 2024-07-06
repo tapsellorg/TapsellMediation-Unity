@@ -1,0 +1,10 @@
+<dependencies>
+    <androidPackages>
+        <androidPackage spec="ir.tapsell.mediation.adapter:mintegral-unity:1.0.1-beta07">
+            <repositories>
+                <repository>https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea</repository>
+                <repository>https://android-sdk.is.com</repository>
+            </repositories>
+        </androidPackage>
+    </androidPackages>
+</dependencies>

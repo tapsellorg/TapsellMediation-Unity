@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using Sample.Scripts;
+using UnityEngine;
 
 public class InterstitialScene : MonoBehaviour
 {
-    private const string ZoneID = "313f90de-f6f0-4e37-a3b3-d9bacceba92f";
+    private const string ZoneID = TapsellMediationKeys.INTERSTITIAL;
     private static string _adId = "";
 
     public void Request()

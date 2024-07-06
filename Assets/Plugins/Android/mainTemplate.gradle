@@ -4,8 +4,14 @@ apply plugin: 'com.android.library'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
-    implementation 'ir.tapsell.mediation.adapter:legacy-unity:1.0.1-beta04' // Assets/Tapsell/Mediation/Adapter/Legacy/Editor/LegacyAdapterDependencies.xml:3
-    implementation 'ir.tapsell.mediation:tapsell-unity:1.0.1-beta04' // Assets/Tapsell/Mediation/Editor/MediationDependencies.xml:3
+    implementation 'com.google.code.gson:gson:2.8.5' // Assets/GoogleMobileAdsNative/Editor/GoogleMobileAdsNativeDependencies.xml:3
+    implementation 'ir.tapsell.mediation.adapter:admob-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7
+    implementation 'ir.tapsell.mediation.adapter:applovin-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7
+    implementation 'ir.tapsell.mediation.adapter:fyber-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Fyber/Editor/FyberAdapterDependencies.xml:7
+    implementation 'ir.tapsell.mediation.adapter:ironsource-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:3
+    implementation 'ir.tapsell.mediation.adapter:legacy-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Legacy/Editor/LegacyAdapterDependencies.xml:3
+    implementation 'ir.tapsell.mediation.adapter:mintegral-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
+    implementation 'ir.tapsell.mediation:tapsell-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Editor/MediationDependencies.xml:3
 // Android Resolver Dependencies End
 **DEPS**}
 

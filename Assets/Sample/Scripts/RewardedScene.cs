@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using Sample.Scripts;
+using UnityEngine;
 
 public class RewardedScene : MonoBehaviour
 {
-    private const string ZoneID = "cce935f9-15a0-4cfa-98a6-3f3e3981bca0";
+    private const string ZoneID = TapsellMediationKeys.REWARDED;
     private static string _adId;
 
     public void Request()

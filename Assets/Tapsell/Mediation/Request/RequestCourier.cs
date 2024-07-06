@@ -6,7 +6,7 @@ namespace Tapsell.Mediation.Request
     internal class RequestCourier
     {
         private static RequestCourier _instance;
-        private readonly Dictionary<string, IRequestListener> _listeners = new();
+        private readonly Dictionary<string, IRequestListener> _listeners = new Dictionary<string, IRequestListener>();
 
         private static class NativeRequestAPIs
         {

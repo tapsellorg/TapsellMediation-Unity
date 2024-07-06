@@ -1,0 +1,11 @@
+<dependencies>
+<!--    <androidPackages>-->
+<!--        <androidPackage spec="ir.tapsell.mediation.adapter:wortise-unity:1.0.1-beta07">-->
+<!--            <repositories>-->
+<!--                <repository>https://maven.wortise.com/artifactory/public</repository>-->
+<!--                <repository>https://artifact.bytedance.com/repository/pangle</repository>-->
+<!--                <repository>https://android-sdk.is.com</repository>-->
+<!--            </repositories>-->
+<!--        </androidPackage>-->
+<!--    </androidPackages>-->
+</dependencies>

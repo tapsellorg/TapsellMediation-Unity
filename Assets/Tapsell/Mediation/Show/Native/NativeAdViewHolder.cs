@@ -9,7 +9,7 @@ namespace Tapsell.Mediation.Show.Native
     {
         private static NativeAdViewHolder _instance;
 
-        private readonly Dictionary<string, NativeAdView> _adViews = new();
+        private readonly Dictionary<string, NativeAdView> _adViews = new Dictionary<string, NativeAdView>();
 
         private NativeAdViewHolder() {}
 
