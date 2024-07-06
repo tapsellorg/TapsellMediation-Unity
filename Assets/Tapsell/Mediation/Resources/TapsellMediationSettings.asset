@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f00de1f65c4718951b5554fd4bfa1e, type: 3}
   m_Name: TapsellMediationSettings
   m_EditorClassIdentifier: 
-  tapsellAndroidAppKey: 76798342-99a7-4a5f-bf5a-60a088d5dcfb
+  tapsellAndroidAppKey: a12e38ed-f1fc-4c76-b638-55f06c103066
   tapsellAndroidAppMarketKey: 
   admobAdapterSignature: ca-app-pub-6201798499291567~9611758993
   applovinAdapterSignature: 5WfZLCGTQmDr6Mf7BBEf5blVwrf8VBMJSmwUSq9-1q5bPpCH_OGAWEP2z2lRkmonLgPzG6gbL4DlvUF9frFmt6

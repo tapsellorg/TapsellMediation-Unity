@@ -6,7 +6,7 @@ namespace Tapsell.Mediation.Adapter.Admob
 {
     internal static class AdmobAndroidCaller
     {
-        private static readonly AndroidJavaClass AndroidClass = new("ir.tapsell.mediation.adapter.admob.unity.Admob");
+        private static readonly AndroidJavaClass AndroidClass = new AndroidJavaClass("ir.tapsell.mediation.adapter.admob.unity.Admob");
 
         internal static void Call(string methodName, params object[] args)
         {

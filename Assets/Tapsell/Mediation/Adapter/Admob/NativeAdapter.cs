@@ -12,15 +12,15 @@ namespace Tapsell.Mediation.Adapter.Admob
     {
         private static NativeAdapter _instance;
 
-        private readonly Dictionary<string, NativeAd> _ads = new();
+        private readonly Dictionary<string, NativeAd> _ads = new Dictionary<string, NativeAd>();
 
         // Since Admob impression callback is not always called, we call the listener in multiple triggers.
         // This List is used to prevent multiple calls.
-        private readonly List<string> _impressionCalled = new();
+        private readonly List<string> _impressionCalled = new List<string>();
 
         // Since Admob click callback is not always called, we call the listener in both open and click triggers.
         // For each filled ad there can be only one click source activated.
-        private readonly Dictionary<string, ClickCallbackSource> _clickCallSources = new();
+        private readonly Dictionary<string, ClickCallbackSource> _clickCallSources = new Dictionary<string, ClickCallbackSource>();
 
         private static class AndroidAPIs
         {
@@ -51,9 +51,9 @@ namespace Tapsell.Mediation.Adapter.Admob
             adLoader.OnNativeAdLoaded += (_, args) => OnAdLoadSuccess(info.requestId, args.nativeAd);
             adLoader.OnAdFailedToLoad += (_, args) => OnAdLoadFailure(info.requestId, args);
 
-            adLoader.OnNativeAdClicked += (_, _) => OnAdClick(info.requestId);
-            adLoader.OnNativeAdImpression += (_, _) => OnAdImpression(info.requestId);
-            adLoader.OnNativeAdOpening += (_, _) => OnAdOpened(info.requestId);
+            adLoader.OnNativeAdClicked += (_, args) => OnAdClick(info.requestId);
+            adLoader.OnNativeAdImpression += (_, args) => OnAdImpression(info.requestId);
+            adLoader.OnNativeAdOpening += (_, args) => OnAdOpened(info.requestId);
 
             adLoader.LoadAd(new AdRequest());
         }

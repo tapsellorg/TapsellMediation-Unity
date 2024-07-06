@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using UnityEngine;
 
 namespace Tapsell.Mediation.Editor.Utils
 {
@@ -99,11 +98,9 @@ namespace Tapsell.Mediation.Editor.Utils
 
         public static void Write(IDictionary<string, string> properties, TextWriter writer)
         {
-            foreach(var (key, value) in properties)
+            foreach(KeyValuePair<string, string> pair in properties)
             {
-                // print the key and value
-                // Debug.LogError("key: " + key + ", value: " + value);
-                writer.Write(key + "=" + value + "\n");
+                writer.Write(pair.Key + "=" + pair.Value + "\n");
             }
         }
 
@@ -198,7 +195,18 @@ namespace Tapsell.Mediation.Editor.Utils
 
         private static string RemoveLastChar(string str)
         {
+#if UNITY_2021_2_OR_NEWER
             return str[..^1];
+#else
+            if (str.Length > 0)
+            {
+                return str.Substring(0, str.Length - 1);
+            }
+            else
+            {
+                return str;
+            }
+#endif
         }
 
         private static KeyValuePair<string, string>? ParseLine(string line)
@@ -409,12 +417,12 @@ namespace Tapsell.Mediation.Editor.Utils
 
         private static bool IsWhiteSpace(char c)
         {
-            return c is ' ' or '\t' or '\f';
+            return c == ' ' || c == '\t' || c == '\f';
         }
 
         private static bool IsSeparator(char c)
         {
-            return c is '=' or ':';
+            return c == '=' || c == ':';
         }
 
         /// <summary>
@@ -428,19 +436,19 @@ namespace Tapsell.Mediation.Editor.Utils
         private static int? HexToInt(char c)
         {
             // 0-9
-            if (c is >= '0' and <= '9')
+            if (c >= '0' && c <= '9')
             {
                 return c - '0';
             }
 
             // A-F
-            if (c is >= 'A' and <= 'F')
+            if (c >= 'A' && c <= 'F')
             {
                 return c - 'A' + 10;
             }
 
             // a-f
-            if (c is >= 'a' and <= 'f')
+            if (c >= 'a' && c <= 'f')
             {
                 return c - 'a' + 10;
             }

@@ -14,7 +14,12 @@ namespace Tapsell.Mediation.Adapter.Applovin.Editor
 
         private protected override string ManifestRelativePath()
         {
-            return "Plugins/Android/TapsellMediationApplovinAdapterPlugin.androidlib/AndroidManifest.xml";
+#if UNITY_2021_2_OR_NEWER
+            return "Plugins/Android/TapsellMediationApplovinAdapterPlugin/AndroidManifest.xml";
+#else
+            return "Plugins/Android/AndroidManifest.xml";       
+#endif
+            
         }
 
         private protected override string MetadataApplicationKey()

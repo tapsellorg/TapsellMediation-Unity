@@ -44,7 +44,7 @@ namespace Tapsell.Mediation.Editor
             var trimmedValue = currentValue.Trim();
             if (trimmedValue.Length == 0) return newPackage;
 
-            if (trimmedValue.Split(",").Any(package => package.Trim().Equals(newPackage)))
+            if (trimmedValue.Split(',').Any(package => package.Trim().Equals(newPackage)))
             {
                 return currentValue;
             }

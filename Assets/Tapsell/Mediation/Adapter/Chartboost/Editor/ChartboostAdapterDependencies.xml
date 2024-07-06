@@ -1,0 +1,10 @@
+<dependencies>
+<!--    <androidPackages>-->
+<!--        <androidPackage spec="ir.tapsell.mediation.adapter:chartboost-unity:1.0.1-beta07" />-->
+<!--            <repositories>-->
+<!--                <repository>https://cboost.jfrog.io/artifactory/chartboost-ads</repository>-->
+<!--                <repository>https://cboost.jfrog.io/ui/native/chartboost-mediation</repository>-->
+<!--                <repository>https://android-sdk.is.com</repository>-->
+<!--            </repositories>-->
+<!--    </androidPackages>-->
+</dependencies>

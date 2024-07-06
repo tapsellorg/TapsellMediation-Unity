@@ -7,7 +7,7 @@ namespace Tapsell.Mediation.Show
     internal class ShowCourier
     {
         private static ShowCourier _instance;
-        private readonly Dictionary<string, IAdStateListener> _listeners = new();
+        private readonly Dictionary<string, IAdStateListener> _listeners = new Dictionary<string, IAdStateListener>();
 
         private static class NativeShowAPIs
         {

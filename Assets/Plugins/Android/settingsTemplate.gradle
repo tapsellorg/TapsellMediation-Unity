@@ -19,7 +19,7 @@ dependencyResolutionManagement {
 // Android Resolver Repos Start
         def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
         maven {
-            url "https://android-sdk.is.com" // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:6, Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
+            url "https://android-sdk.is.com" // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:6, Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Fyber/Editor/FyberAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
         }
         maven {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
