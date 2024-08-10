@@ -42,16 +42,6 @@ namespace Tapsell.Mediation.Editor
         }
         
         [SerializeField]
-        private string tapsellAndroidAppMarketKey = string.Empty;
-
-        public string TapsellAndroidAppMarketKey
-        {
-            get => tapsellAndroidAppMarketKey;
-
-            set => tapsellAndroidAppMarketKey = value;
-        }
-        
-        [SerializeField]
         private string admobAdapterSignature = string.Empty;
 
         public string AdmobAdapterSignature

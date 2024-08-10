@@ -3,7 +3,6 @@
     <package>com.google.code.gson:gson:2.8.5</package>
     <package>ir.tapsell.mediation.adapter:admob-unity:1.0.1-beta07</package>
     <package>ir.tapsell.mediation.adapter:applovin-unity:1.0.1-beta07</package>
-    <package>ir.tapsell.mediation.adapter:fyber-unity:1.0.1-beta07</package>
     <package>ir.tapsell.mediation.adapter:ironsource-unity:1.0.1-beta07</package>
     <package>ir.tapsell.mediation.adapter:legacy-unity:1.0.1-beta07</package>
     <package>ir.tapsell.mediation.adapter:mintegral-unity:1.0.1-beta07</package>
@@ -11,8 +10,8 @@
   </packages>
   <files />
   <settings>
-    <setting name="androidAbis" value="arm64-v8a" />
-    <setting name="bundleId" value="com.DefaultCompany.TapsellMediationUnitySample" />
+    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
+    <setting name="bundleId" value="ir.tapsell.unity.sample" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="True" />

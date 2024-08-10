@@ -77,6 +77,9 @@ crashlytics-build.properties
 test_BurstDebugInformation_DoNotShip/
 test_BackUpThisFolder_ButDontShipItWithYourGame/
 test_mapping.txt
+TapsellMediation-UnitySample_BurstDebugInformation_DoNotShip
+
+ProjectSettings/boot.config
 
 /[Aa]ndroid/
 Android_BurstDebugInformation_DoNotShip

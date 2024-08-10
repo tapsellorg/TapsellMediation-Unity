@@ -22,18 +22,15 @@ namespace Tapsell.Mediation.Editor.Utils
 #endif
     {
         private protected abstract string PluginName();
-        private protected abstract string ManifestRelativePath();
+
+        private string ManifestRelativePath()
+        {
+            return "Plugins/Android/AndroidManifest.xml";
+        }
         private protected abstract string MetadataApplicationKey();
         private protected abstract string MetadataApplicationValue();
         private protected abstract bool ShouldValidateMetadataApplicationValue();
-        private protected virtual string MetadataApplicationMarketKey()
-        {
-            return String.Empty; 
-        }
-        private protected virtual string MetadataApplicationMarketValue()
-        {
-            return String.Empty;
-        }
+
         public abstract int callbackOrder { get; }
 
         private readonly XNamespace _ns = "http://schemas.android.com/apk/res/android";
@@ -90,11 +87,6 @@ namespace Tapsell.Mediation.Editor.Utils
                 .Where( elem => elem.Name.LocalName.Equals("meta-data"));
 
             SetMetadataElement(elemApplication, metas, MetadataApplicationKey(), value);
-            var marketValue = MetadataApplicationMarketValue();
-            if (marketValue != string.Empty)
-            {
-                SetMetadataElement(elemApplication, metas, MetadataApplicationMarketKey(), marketValue);
-            }
             
             elemManifest.Save(manifestPath);
         }

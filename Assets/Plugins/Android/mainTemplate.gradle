@@ -1,3 +1,21 @@
+// Android Resolver Repos Start
+([rootProject] + (rootProject.subprojects as List)).each { project ->
+    project.repositories {
+        def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
+        maven {
+            url "https://maven.google.com"
+        }
+        maven {
+            url "https://android-sdk.is.com" // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:6, Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
+        }
+        maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
+        }
+        mavenLocal()
+        mavenCentral()
+    }
+}
+// Android Resolver Repos End
 apply plugin: 'com.android.library'
 **APPLY_PLUGINS**
 
@@ -7,7 +25,6 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5' // Assets/GoogleMobileAdsNative/Editor/GoogleMobileAdsNativeDependencies.xml:3
     implementation 'ir.tapsell.mediation.adapter:admob-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7
     implementation 'ir.tapsell.mediation.adapter:applovin-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7
-    implementation 'ir.tapsell.mediation.adapter:fyber-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Fyber/Editor/FyberAdapterDependencies.xml:7
     implementation 'ir.tapsell.mediation.adapter:ironsource-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:3
     implementation 'ir.tapsell.mediation.adapter:legacy-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Legacy/Editor/LegacyAdapterDependencies.xml:3
     implementation 'ir.tapsell.mediation.adapter:mintegral-unity:1.0.1-beta07' // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
@@ -19,7 +36,6 @@ dependencies {
 android {
   packagingOptions {
       exclude ('/lib/armeabi/*' + '*')
-      exclude ('/lib/armeabi-v7a/*' + '*')
       exclude ('/lib/mips/*' + '*')
       exclude ('/lib/mips64/*' + '*')
       exclude ('/lib/x86/*' + '*')
@@ -35,8 +51,8 @@ android {
     buildToolsVersion '**BUILDTOOLS**'
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     defaultConfig {

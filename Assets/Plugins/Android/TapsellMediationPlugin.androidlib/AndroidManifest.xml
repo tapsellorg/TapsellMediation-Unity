@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="ir.tapsell.mediation">
-  <application>
-    <meta-data android:name="ir.tapsell.mediation.APPLICATION_KEY" android:value="76798342-99a7-4a5f-bf5a-60a088d5dcfb" />
-  </application>
-</manifest>

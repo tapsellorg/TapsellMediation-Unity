@@ -12,15 +12,6 @@ namespace Tapsell.Mediation.Adapter.Admob.Editor
             return "TapsellMediationAdmobAdapter";
         }
 
-        private protected override string ManifestRelativePath()
-        {
-#if UNITY_2021_2_OR_NEWER
-            return "Plugins/Android/TapsellMediationAdmobAdapterPlugin/AndroidManifest.xml";
-#else
-            return "Plugins/Android/AndroidManifest.xml";       
-#endif
-        }
-
         private protected override string MetadataApplicationKey()
         {
             return "com.google.android.gms.ads.APPLICATION_ID";

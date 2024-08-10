@@ -11,7 +11,6 @@ namespace Tapsell.Mediation.Editor
         private const string AdaptersDirectory = "Assets/Tapsell/Mediation/Adapter/";
 
         private SerializedProperty _appKeyAndroid;
-        private SerializedProperty _appMarketKeyAndroid;
         private SerializedProperty _admobSignatureAndroid;
         private SerializedProperty _applovinSignatureAndroid;
 
@@ -24,7 +23,6 @@ namespace Tapsell.Mediation.Editor
         public void OnEnable()
         {
             _appKeyAndroid = serializedObject.FindProperty("tapsellAndroidAppKey");
-            _appMarketKeyAndroid = serializedObject.FindProperty("tapsellAndroidAppMarketKey");
             _admobSignatureAndroid = serializedObject.FindProperty("admobAdapterSignature");
             _applovinSignatureAndroid = serializedObject.FindProperty("applovinAdapterSignature");
         }
@@ -54,19 +52,6 @@ namespace Tapsell.Mediation.Editor
 
             EditorGUI.indentLevel--;
             EditorGUILayout.Separator();
-            
-            // App Market key
-            EditorGUI.indentLevel--;
-            EditorGUILayout.Separator();
-            
-            EditorGUILayout.LabelField("Tapsell Mediation App Market Key", EditorStyles.boldLabel);
-            EditorGUI.indentLevel++;
-
-            EditorGUILayout.PropertyField(_appMarketKeyAndroid, new GUIContent("Android Market"));
-
-            EditorGUILayout.HelpBox(
-                "Tapsell Mediation App Market Key is the market that your app is published in",
-                MessageType.Info);
 
             // Adapters signatures
             var admobImported = Directory.Exists(AdaptersDirectory + "Admob");
