@@ -1,12 +1,12 @@
 <dependencies>
   <packages>
     <package>com.google.code.gson:gson:2.8.5</package>
-    <package>ir.tapsell.mediation.adapter:admob-unity:1.0.1-beta07</package>
-    <package>ir.tapsell.mediation.adapter:applovin-unity:1.0.1-beta07</package>
-    <package>ir.tapsell.mediation.adapter:ironsource-unity:1.0.1-beta07</package>
-    <package>ir.tapsell.mediation.adapter:legacy-unity:1.0.1-beta07</package>
-    <package>ir.tapsell.mediation.adapter:mintegral-unity:1.0.1-beta07</package>
-    <package>ir.tapsell.mediation:tapsell-unity:1.0.1-beta07</package>
+    <package>ir.tapsell.mediation.adapter:admob-unity:1.0.2-beta07</package>
+    <package>ir.tapsell.mediation.adapter:applovin-unity:1.0.2-beta07</package>
+    <package>ir.tapsell.mediation.adapter:ironsource-unity:1.0.2-beta07</package>
+    <package>ir.tapsell.mediation.adapter:legacy-unity:1.0.2-beta07</package>
+    <package>ir.tapsell.mediation.adapter:mintegral-unity:1.0.2-beta07</package>
+    <package>ir.tapsell:tapsell-unity:1.0.2-beta07</package>
   </packages>
   <files />
   <settings>

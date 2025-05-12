@@ -50,15 +50,5 @@ namespace Tapsell.Mediation.Editor
 
             set => admobAdapterSignature = value;
         }
-
-        [SerializeField]
-        private string applovinAdapterSignature = string.Empty;
-
-        public string ApplovinAdapterSignature
-        {
-            get => applovinAdapterSignature;
-
-            set => applovinAdapterSignature = value;
-        }
     }
 }
