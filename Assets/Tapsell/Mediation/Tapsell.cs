@@ -187,7 +187,7 @@ namespace Tapsell.Mediation
 
         private static Boolean IsZoneIdValid(String zoneId)
         {
-            Boolean isMatch = Regex.IsMatch(zoneId, TapsellConstants.REGEX_STR_UUID);
+            Boolean isMatch = Regex.IsMatch(zoneId, TapsellConstants.REGEX_STR_TAPSELL_ID) || Regex.IsMatch(zoneId, TapsellConstants.REGEX_STR_UUID);
             if (isMatch) return true;
             LogZoneIdError(zoneId);
             return false;

@@ -1,6 +1,6 @@
 <dependencies>
 <!--    <androidPackages>-->
-<!--        <androidPackage spec="ir.tapsell.mediation.adapter:wortise-unity:1.0.1-beta07">-->
+<!--        <androidPackage spec="ir.tapsell.mediation.adapter:wortise-unity:1.0.2-beta07">-->
 <!--            <repositories>-->
 <!--                <repository>https://maven.wortise.com/artifactory/public</repository>-->
 <!--                <repository>https://artifact.bytedance.com/repository/pangle</repository>-->

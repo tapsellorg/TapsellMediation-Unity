@@ -12,7 +12,6 @@ namespace Tapsell.Mediation.Editor
 
         private SerializedProperty _appKeyAndroid;
         private SerializedProperty _admobSignatureAndroid;
-        private SerializedProperty _applovinSignatureAndroid;
 
         [MenuItem("Assets/Tapsell/Settings...")]
         public static void OpenInspector()
@@ -24,7 +23,6 @@ namespace Tapsell.Mediation.Editor
         {
             _appKeyAndroid = serializedObject.FindProperty("tapsellAndroidAppKey");
             _admobSignatureAndroid = serializedObject.FindProperty("admobAdapterSignature");
-            _applovinSignatureAndroid = serializedObject.FindProperty("applovinAdapterSignature");
         }
 
         public override void OnInspectorGUI()
@@ -55,25 +53,14 @@ namespace Tapsell.Mediation.Editor
 
             // Adapters signatures
             var admobImported = Directory.Exists(AdaptersDirectory + "Admob");
-            var applovinImported = Directory.Exists(AdaptersDirectory + "Applovin");
 
-            if (admobImported || applovinImported)
+            if (admobImported)
             {
                 EditorGUILayout.LabelField("Mediation Adapters Signature (Android)",
                     EditorStyles.boldLabel);
                 EditorGUI.indentLevel++;
-
-                if (admobImported)
-                {
-                    EditorGUILayout.PropertyField(_admobSignatureAndroid,
-                        new GUIContent("Admob Signature"));
-                }
-
-                if (applovinImported)
-                {
-                    EditorGUILayout.PropertyField(_applovinSignatureAndroid,
-                        new GUIContent("Applovin Signature"));
-                }
+                
+                EditorGUILayout.PropertyField(_admobSignatureAndroid, new GUIContent("Admob Signature"));
 
                 EditorGUILayout.HelpBox(
                     "For more information on these values, contact Tapsell support.",

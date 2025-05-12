@@ -77,7 +77,7 @@ namespace Tapsell.Mediation.Editor.Utils
                 return;
             }
 
-            if (ShouldValidateMetadataApplicationValue() && !Regex.IsMatch(value, TapsellConstants.REGEX_STR_UUID))
+            if (ShouldValidateMetadataApplicationValue() && !(Regex.IsMatch(value, TapsellConstants.REGEX_STR_TAPSELL_ID) || Regex.IsMatch(value, TapsellConstants.REGEX_STR_UUID)))
             {
                 StopBuildWithMessage("Incorrect AppKey received in settings. Please enter valid AppKey to run ads properly.");
                 return;

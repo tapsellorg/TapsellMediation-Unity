@@ -8,8 +8,7 @@
       </intent-filter>
       <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
     </activity>
-    <meta-data android:name="ir.tapsell.mediation.APPLICATION_KEY" android:value="a12e38ed-f1fc-4c76-b638-55f06c103066" />
-    <meta-data android:name="applovin.sdk.key" android:value="5WfZLCGTQmDr6Mf7BBEf5blVwrf8VBMJSmwUSq9-1q5bPpCH_OGAWEP2z2lRkmonLgPzG6gbL4DlvUF9frFmt6" />
-    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-6201798499291567~9611758993" />
+    <meta-data android:name="ir.tapsell.mediation.APPLICATION_KEY" android:value="76798342-99a7-4a5f-bf5a-60a088d5dcfb" />
+    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />
   </application>
 </manifest>
