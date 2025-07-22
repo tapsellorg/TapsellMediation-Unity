@@ -14,9 +14,9 @@ public class RewardedScene : MonoBehaviour
                 Debug.Log("onRewardedAd requestSuccess");
                 _adId = adId;
             },
-            () =>
+            (error) =>
             {
-                Debug.Log("onRewardedAd requestFailed");
+                Debug.Log("onRewardedAd requestFailed: " + error);
             }
         );
     }

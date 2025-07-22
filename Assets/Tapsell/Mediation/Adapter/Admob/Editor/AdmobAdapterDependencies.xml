@@ -1,6 +1,6 @@
 <dependencies>
     <androidPackages>
-        <androidPackage spec="ir.tapsell.mediation.adapter:admob-unity:1.0.2-beta07">
+        <androidPackage spec="ir.tapsell.mediation.adapter:admob-unity:1.0.2-beta09">
             <repositories>
                 <repository>https://android-sdk.is.com</repository>
             </repositories>

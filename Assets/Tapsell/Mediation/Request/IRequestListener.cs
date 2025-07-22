@@ -5,15 +5,15 @@ namespace Tapsell.Mediation.Request
     public interface IRequestListener
     {
         public void OnSuccess(string adId);
-        public void OnFailure();
+        public void OnFailure(string message);
     }
 
     internal class RequestListenerImpl: IRequestListener
     {
         private readonly Action<string> _onSuccess;
-        private readonly Action _onFailure;
+        private readonly Action<string> _onFailure;
 
-        public RequestListenerImpl(Action<string> onSuccess, Action onFailure)
+        public RequestListenerImpl(Action<string> onSuccess, Action<string> onFailure)
         {
             _onSuccess = onSuccess;
             _onFailure = onFailure;
@@ -24,9 +24,9 @@ namespace Tapsell.Mediation.Request
             _onSuccess(adId);
         }
 
-        public void OnFailure()
+        public void OnFailure(string message)
         {
-            _onFailure();
+            _onFailure(message);
         }
     }
 }

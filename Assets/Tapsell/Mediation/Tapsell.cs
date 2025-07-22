@@ -10,7 +10,7 @@ namespace Tapsell.Mediation
 {
     public static class Tapsell
     {
-        public static void RequestRewardedAd(string zoneId, Action<string> onSuccess, Action onFailure)
+        public static void RequestRewardedAd(string zoneId, Action<string> onSuccess, Action<string> onFailure)
         {
             RequestRewardedAd(zoneId, new RequestListenerImpl(onSuccess, onFailure));
         }
@@ -25,7 +25,7 @@ namespace Tapsell.Mediation
         {}
 #endif
 
-        public static void RequestInterstitialAd(string zoneId, Action<string> onSuccess, Action onFailure)
+        public static void RequestInterstitialAd(string zoneId, Action<string> onSuccess, Action<string> onFailure)
         {
             RequestInterstitialAd(zoneId, new RequestListenerImpl(onSuccess, onFailure));
         }
@@ -40,12 +40,12 @@ namespace Tapsell.Mediation
         {}
 #endif
 
-        public static void RequestBannerAd(string zoneId, Action<string> onSuccess, Action onFailure)
+        public static void RequestBannerAd(string zoneId, Action<string> onSuccess, Action<string> onFailure)
         {
             RequestBannerAd(zoneId, new RequestListenerImpl(onSuccess, onFailure));
         }
 
-        public static void RequestBannerAd(string zoneId, BannerSize bannerSize, Action<string> onSuccess, Action onFailure)
+        public static void RequestBannerAd(string zoneId, BannerSize bannerSize, Action<string> onSuccess, Action<string> onFailure)
         {
             RequestBannerAd(zoneId, bannerSize, new RequestListenerImpl(onSuccess, onFailure));
         }
@@ -65,7 +65,7 @@ namespace Tapsell.Mediation
         {}
 #endif
 
-        public static void RequestNativeAd(string zoneId, Action<string> onSuccess, Action onFailure)
+        public static void RequestNativeAd(string zoneId, Action<string> onSuccess, Action<string> onFailure)
         {
             RequestNativeAd(zoneId, new RequestListenerImpl(onSuccess, onFailure));
         }
@@ -76,7 +76,7 @@ namespace Tapsell.Mediation
             else LogParameterError("native ad request");
         }
 
-        public static void RequestMultipleNativeAds(string zoneId, int maximumCount, Action<string> onSuccess, Action onFailure)
+        public static void RequestMultipleNativeAds(string zoneId, int maximumCount, Action<string> onSuccess, Action<string> onFailure)
         {
             RequestMultipleNativeAds(zoneId, maximumCount, new RequestListenerImpl(onSuccess, onFailure));
         }
