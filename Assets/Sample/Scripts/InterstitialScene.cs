@@ -14,9 +14,9 @@ public class InterstitialScene : MonoBehaviour
                 Debug.Log("onInterstitialAd requestSuccess");
                 _adId = adId;
             },
-            () =>
+            (error) =>
             {
-                Debug.Log("onInterstitialAd requestFailed");
+                Debug.Log("onInterstitialAd requestFailed: " + error);
             }
         );
     }

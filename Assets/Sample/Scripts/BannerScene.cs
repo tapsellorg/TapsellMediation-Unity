@@ -18,9 +18,9 @@ public class BannerScene : MonoBehaviour
                 Debug.Log("onBannerAd requestSuccess");
                 _adId = adId;
             },
-            () =>
+            (error) =>
             {
-                Debug.Log("onBannerAd requestFailed");
+                Debug.Log("onBannerAd requestFailed: " + error);
             }
         );
     }

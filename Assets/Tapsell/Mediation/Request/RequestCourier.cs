@@ -68,9 +68,9 @@ namespace Tapsell.Mediation.Request
         }
 
         // Called on failed request event from the messenger
-        internal void OnFailedRequest(string requestId)
+        internal void OnFailedRequest(FailedRequestResponse response)
         {
-            _listeners[requestId]?.OnFailure();
+            _listeners[response.requestId]?.OnFailure(response.message);
         }
 
         private string InitiateRequest(IRequestListener listener)

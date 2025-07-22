@@ -15,9 +15,9 @@ namespace Tapsell.Mediation
                 .OnSuccessfulRequest(JsonUtility.FromJson<RequestResponse>(response));
         }
 
-        public void OnFailedRequest(string requestId)
+        public void OnFailedRequest(string response)
         {
-            RequestCourier.Get().OnFailedRequest(requestId);
+            RequestCourier.Get().OnFailedRequest(JsonUtility.FromJson<FailedRequestResponse>(response));
         }
 
         public void OnUserRewarded(string adId)

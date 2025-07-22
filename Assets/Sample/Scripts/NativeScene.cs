@@ -16,9 +16,9 @@ public class NativeScene : MonoBehaviour
                 Debug.Log("onNativeAd requestSuccess");
                 _adId = adId;
             },
-            () =>
+            (error) =>
             {
-                Debug.Log("onNativeAd requestFailed");
+                Debug.Log("onNativeAd requestFailed: " + error);
             }
         );
     }

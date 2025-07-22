@@ -1,12 +1,16 @@
 <dependencies>
   <packages>
+    <package>androidx.core:core-ktx:1.9.0</package>
+    <package>androidx.lifecycle:lifecycle-process:2.6.1</package>
     <package>com.google.code.gson:gson:2.8.5</package>
-    <package>ir.tapsell.mediation.adapter:admob-unity:1.0.2-beta07</package>
-    <package>ir.tapsell.mediation.adapter:applovin-unity:1.0.2-beta07</package>
-    <package>ir.tapsell.mediation.adapter:ironsource-unity:1.0.2-beta07</package>
-    <package>ir.tapsell.mediation.adapter:legacy-unity:1.0.2-beta07</package>
-    <package>ir.tapsell.mediation.adapter:mintegral-unity:1.0.2-beta07</package>
-    <package>ir.tapsell:tapsell-unity:1.0.2-beta07</package>
+    <package>ir.tapsell.mediation.adapter:admob-unity:1.0.2-beta09</package>
+    <package>ir.tapsell.mediation.adapter:applovin-unity:1.0.2-beta09</package>
+    <package>ir.tapsell.mediation.adapter:fyber-unity:1.0.2-beta09</package>
+    <package>ir.tapsell.mediation.adapter:ironsource-unity:1.0.2-beta09</package>
+    <package>ir.tapsell.mediation.adapter:legacy-unity:1.0.2-beta09</package>
+    <package>ir.tapsell.mediation.adapter:mintegral-unity:1.0.2-beta09</package>
+    <package>ir.tapsell.mediation.adapter:unityads-unity:1.0.2-beta09</package>
+    <package>ir.tapsell:tapsell-unity:1.0.2-beta09</package>
   </packages>
   <files />
   <settings>

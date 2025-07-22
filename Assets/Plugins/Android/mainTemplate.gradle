@@ -6,7 +6,7 @@
             url "https://maven.google.com"
         }
         maven {
-            url "https://android-sdk.is.com" // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:6, Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
+            url "https://android-sdk.is.com" // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:6, Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Fyber/Editor/FyberAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/UnityAds/Editor/UnityAdsAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
         }
         maven {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
@@ -22,13 +22,17 @@ apply plugin: 'com.android.library'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 // Android Resolver Dependencies Start
+    implementation 'androidx.core:core-ktx:1.9.0' // Assets/Tapsell/Mediation/Editor/MediationDependencies.xml:5
+    implementation 'androidx.lifecycle:lifecycle-process:2.6.1' // Assets/Tapsell/Mediation/Editor/MediationDependencies.xml:4
     implementation 'com.google.code.gson:gson:2.8.5' // Assets/GoogleMobileAdsNative/Editor/GoogleMobileAdsNativeDependencies.xml:3
-    implementation 'ir.tapsell.mediation.adapter:admob-unity:1.0.2-beta07' // Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7
-    implementation 'ir.tapsell.mediation.adapter:applovin-unity:1.0.2-beta07' // Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7
-    implementation 'ir.tapsell.mediation.adapter:ironsource-unity:1.0.2-beta07' // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:3
-    implementation 'ir.tapsell.mediation.adapter:legacy-unity:1.0.2-beta07' // Assets/Tapsell/Mediation/Adapter/Legacy/Editor/LegacyAdapterDependencies.xml:3
-    implementation 'ir.tapsell.mediation.adapter:mintegral-unity:1.0.2-beta07' // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
-    implementation 'ir.tapsell:tapsell-unity:1.0.2-beta07' // Assets/Tapsell/Mediation/Editor/MediationDependencies.xml:3
+    implementation 'ir.tapsell.mediation.adapter:admob-unity:1.0.2-beta09' // Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7
+    implementation 'ir.tapsell.mediation.adapter:applovin-unity:1.0.2-beta09' // Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7
+    implementation 'ir.tapsell.mediation.adapter:fyber-unity:1.0.2-beta09' // Assets/Tapsell/Mediation/Adapter/Fyber/Editor/FyberAdapterDependencies.xml:7
+    implementation 'ir.tapsell.mediation.adapter:ironsource-unity:1.0.2-beta09' // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:3
+    implementation 'ir.tapsell.mediation.adapter:legacy-unity:1.0.2-beta09' // Assets/Tapsell/Mediation/Adapter/Legacy/Editor/LegacyAdapterDependencies.xml:3
+    implementation 'ir.tapsell.mediation.adapter:mintegral-unity:1.0.2-beta09' // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
+    implementation 'ir.tapsell.mediation.adapter:unityads-unity:1.0.2-beta09' // Assets/Tapsell/Mediation/Adapter/UnityAds/Editor/UnityAdsAdapterDependencies.xml:7
+    implementation 'ir.tapsell:tapsell-unity:1.0.2-beta09' // Assets/Tapsell/Mediation/Editor/MediationDependencies.xml:3
 // Android Resolver Dependencies End
 **DEPS**}
 

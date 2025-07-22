@@ -1,0 +1,15 @@
+<dependencies>
+<!--    <androidPackages>-->
+<!--        <androidPackage spec="ir.tapsell.mediation.adapter:yandex-unity:1.0.2-beta09"/>-->
+<!--        <repositories>-->
+<!--            <repository>https://maven.google.com/</repository>-->
+<!--            <repository>https://android-sdk.is.com/</repository>-->
+<!--            <repository>https://artifact.bytedance.com/repository/pangle</repository>-->
+<!--            <repository>https://sdk.tapjoy.com/</repository>-->
+<!--            <repository>https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea</repository>-->
+<!--            <repository>https://cboost.jfrog.io/artifactory/chartboost-ads/</repository>-->
+<!--            <repository>https://dl.appnext.com/</repository>-->
+<!--            <repository>https://repo1.maven.org/maven2/</repository>-->
+<!--        </repositories>-->
+<!--    </androidPackages>-->
+</dependencies>

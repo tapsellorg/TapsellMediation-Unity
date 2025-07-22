@@ -88,9 +88,11 @@ namespace Tapsell.Mediation.Editor.Utils
                 {
                     continue;
                 }
-
-                // Succeeded in extracting a key-value pair.
-                properties.Add(pair.Value.Key, pair.Value.Value);
+                
+                if (!properties.ContainsKey(pair.Value.Key))
+                {
+                    properties.Add(pair.Value.Key, pair.Value.Value);
+                }
             }
 
             return properties;
