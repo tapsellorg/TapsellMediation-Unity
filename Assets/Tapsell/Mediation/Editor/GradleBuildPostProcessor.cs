@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Tapsell.Mediation.Editor.Utils;
@@ -15,28 +16,40 @@ namespace Tapsell.Mediation.Editor
 
         public void OnPostGenerateGradleAndroidProject(string path)
         {
-            var gradlePropertiesFile = path + "/../" + GradlePropertiesFile;
-            if (!File.Exists(gradlePropertiesFile))
+            var gradlePropertiesFile = Path.GetFullPath(Path.Combine(path, "..", GradlePropertiesFile));
+
+            IDictionary<string, string> properties;
+
+            // Safely read the file if it already exists
+            if (File.Exists(gradlePropertiesFile))
             {
-                File.Create(gradlePropertiesFile);
+                // The 'using' statement ensures the reader is closed automatically
+                using (var propertiesReader = File.OpenText(gradlePropertiesFile))
+                {
+                    properties = PropertiesHelper.Load(propertiesReader);
+                }
+            }
+            else
+            {
+                properties = new Dictionary<string, string>();
             }
 
-            var propertiesReader = File.OpenText(gradlePropertiesFile);
-            var properties = PropertiesHelper.Load(propertiesReader);
-            propertiesReader.Close();
-
+            // Modify the properties in memory
             if (properties.ContainsKey(JetifierIgnorePropertyKey))
             {
                 properties[JetifierIgnorePropertyKey] =
                     AddPackageIfNotPresent(properties[JetifierIgnorePropertyKey], MoshiPackage);
             }
-            else properties[JetifierIgnorePropertyKey] = MoshiPackage;
+            else
+            {
+                properties[JetifierIgnorePropertyKey] = MoshiPackage;
+            }
 
-            var writer = File.CreateText(gradlePropertiesFile);
-
-            PropertiesHelper.Write(properties, writer);
-
-            writer.Flush();
+            // Safely write the properties back.
+            using (var writer = File.CreateText(gradlePropertiesFile))
+            {
+                PropertiesHelper.Write(properties, writer);
+            }
         }
 
         private static string AddPackageIfNotPresent(string currentValue, string newPackage)
