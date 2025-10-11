@@ -1,21 +1,3 @@
-// Android Resolver Repos Start
-([rootProject] + (rootProject.subprojects as List)).each { project ->
-    project.repositories {
-        def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
-        maven {
-            url "https://maven.google.com"
-        }
-        maven {
-            url "https://android-sdk.is.com" // Assets/Tapsell/Mediation/Adapter/IronSource/Editor/IronSourceAdapterDependencies.xml:6, Assets/Tapsell/Mediation/Adapter/Admob/Editor/AdmobAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Applovin/Editor/ApplovinAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Fyber/Editor/FyberAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/UnityAds/Editor/UnityAdsAdapterDependencies.xml:7, Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
-        }
-        maven {
-            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" // Assets/Tapsell/Mediation/Adapter/Mintegral/Editor/MintegralAdapterDependencies.xml:8
-        }
-        mavenLocal()
-        mavenCentral()
-    }
-}
-// Android Resolver Repos End
 apply plugin: 'com.android.library'
 **APPLY_PLUGINS**
 
