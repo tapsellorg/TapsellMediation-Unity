@@ -1,5 +1,5 @@
 <dependencies>
     <androidPackages>
-        <androidPackage spec="ir.tapsell.mediation.adapter:legacy-unity:1.2.0" />
+        <androidPackage spec="ir.tapsell.mediation.adapter:legacy-unity:1.3.0-beta02" />
     </androidPackages>
 </dependencies>

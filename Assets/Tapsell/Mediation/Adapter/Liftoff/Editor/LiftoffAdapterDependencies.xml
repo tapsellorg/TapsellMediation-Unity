@@ -1,9 +1,6 @@
 <dependencies>
     <androidPackages>
-        <androidPackage spec="ir.tapsell.mediation.adapter:liftoff-unity:1.2.0">
-            <repositories>
-                <repository>https://android-sdk.is.com</repository>
-            </repositories>
+        <androidPackage spec="ir.tapsell.mediation.adapter:liftoff-unity:1.3.0-beta02">
         </androidPackage>
     </androidPackages>
 </dependencies>
